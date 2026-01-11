@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prenota | 216 Barber</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2 style="text-align:center">Prenota il tuo taglio</h2>
+
+<form id="bookingForm">
+  <input id="nome" placeholder="Nome" required>
+  <input id="telefono" placeholder="Telefono" required>
+
+  <select id="servizio">
+    <option>Sfumatura</option>
+    <option>Taglio + Barba</option>
+  </select>
+
+  <select id="barbiere">
+    <option value="marco">Marco</option>
+    <option value="luca">Luca</option>
+  </select>
+
+  <input type="datetime-local" id="data" required>
+
+  <button class="btn">Conferma Prenotazione</button>
+</form>
+
+<script src="js/prenotazioni.js"></script>
+</body>
+</html>

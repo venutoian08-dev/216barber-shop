@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>216 Barber & Hair | Codroipo</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <meta name="description" content="216 Barber & Hair a Codroipo. Sfumature, tagli moderni, barber street style. Prenota online il tuo taglio.">
+</head>
+<body>
+
+  <div class="mobile-cta">
+    <a href="prenota.html"><i class="fas fa-calendar-alt"></i> PRENOTA</a>
+    <a href="https://wa.me/393518564207"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+  </div>
+
+  <header>
+    <h1>216 BARBER & HAIR</h1>
+    <nav>
+      <a href="prenota.html">Prenota</a>
+      <a href="#instagram">Social</a>
+      <a href="#contatti">Dove Siamo</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>SFUMATURE. STILE. ATTITUDE.</h2>
+      
+      <p class="servizi-text">
+        Specializzati in <strong>Sfumature (Fade)</strong>, <strong>Taglio + Barba</strong>, 
+        Design & Linee geometriche. Il punto di riferimento a Codroipo.
+      </p>
+
+      <div class="hero-btns">
+        <a class="btn" href="prenota.html">PRENOTA ORA</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="instagram">
+    <h2>DAL NOSTRO INSTAGRAM</h2>
+    <p style="text-align:center; margin-bottom:20px; color:#ccc;">I nostri ultimi lavori</p>
+  
+    <div class="insta-grid">
+      <a href="https://www.instagram.com/_barber_216/" target="_blank" class="insta-card">
+        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Taglio Sfumato">
+        <div class="insta-overlay"><i class="fab fa-instagram"></i> Vedi Post</div>
+      </a>
+  
+      <a href="https://www.instagram.com/_barber_216/" target="_blank" class="insta-card">
+        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Barba e Taglio">
+        <div class="insta-overlay"><i class="fab fa-instagram"></i> Vedi Post</div>
+      </a>
+  
+      <a href="https://www.instagram.com/_barber_216/" target="_blank" class="insta-card">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Design Hair">
+        <div class="insta-overlay"><i class="fab fa-instagram"></i> Vedi Post</div>
+      </a>
+    </div>
+  
+    <div style="text-align:center; margin-top:30px;">
+      <a class="btn btn-outline" href="https://instagram.com/_barber_216" target="_blank">
+        <i class="fab fa-instagram"></i> Seguici su Instagram
+      </a>
+    </div>
+  </section>
+
+  <section id="map">
+    <h2>DOVE SIAMO</h2>
+    <p style="text-align:center; margin-bottom:15px;">Via P. Zorutti, 4B, 33033 Codroipo UD</p>
+    
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.678886368487!2d12.9755!3d45.9625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477a4aa64c0e64f9%3A0x123456789abcdef!2sVia%20P.%20Zorutti%2C%204B%2C%2033033%20Codroipo%20UD!5e0!3m2!1sit!2sit!4v1610000000000!5m2!1sit!2sit" 
+        width="100%" 
+        height="350" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <h2>CONTATTI</h2>
+    
+    <div class="contatti-wrapper">
+      <div class="contatto-item">
+        <i class="fas fa-map-marker-alt icon-gradient"></i>
+        <p>Codroipo (UD)</p>
+      </div>
+      
+      <div class="contatto-item">
+        <i class="fas fa-phone-alt icon-gradient"></i>
+        <p><a href="tel:3518564207">351 856 4207</a></p>
+      </div>
+
+      <a class="btn whatsapp-btn" href="https://wa.me/393518564207" target="_blank">
+        <i class="fab fa-whatsapp"></i> Scrivici su WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 216 Barber & Hair – Codroipo</p>
+    <a href="privacy.html">Privacy & Cookie Policy</a>
+  </footer>
+
+  <div id="cookie-banner">
+    <p>Questo sito utilizza cookie tecnici per migliorare l'esperienza.</p>
+    <button onclick="acceptCookies()">OK, CAPITO</button>
+  </div>
+
+  <script>
+    function acceptCookies(){
+      localStorage.setItem("cookieAccepted", "true");
+      document.getElementById("cookie-banner").style.display="none";
+    }
+    if(!localStorage.getItem("cookieAccepted")){
+      document.getElementById("cookie-banner").style.display="flex";
+    }
+  </script>
+
+</body>
+</html>

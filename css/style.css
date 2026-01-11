@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --bg: #0a0a0f;
+  --card-bg: #141421;
+  --blue: #1f6bff;
+  --purple: #7f2cff;
+  --red: #ff2f5e;
+  --green: #25D366; /* Verde WhatsApp */
+  --text: #f1f1f1;
+}
+
+* {box-sizing:border-box;margin:0;padding:0;}
+
+html {scroll-behavior: smooth;}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden; /* Evita scroll orizzontale */
+}
+
+/* HEADER */
+header {
+  padding: 20px 40px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  background: rgba(10, 10, 15, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(127,44,255,.1);
+}
+
+header h1 {
+  font-family: 'Bebas Neue'; 
+  font-size: 2rem; 
+  letter-spacing: 2px; 
+  background: linear-gradient(90deg, #fff, var(--blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav a {
+  margin-left: 20px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: .3s;
+}
+nav a:hover { color: var(--blue); }
+
+/* HERO SECTION */
+.hero {
+  height: 90vh; /* Quasi tutta l'altezza */
+  min-height: 500px;
+  background: linear-gradient(to bottom, rgba(10,10,15,0.7), var(--bg)), url("../assets/mural-bg.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centratura totale */
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-family: 'Bebas Neue'; 
+  font-size: 4.5rem; 
+  line-height: 1; 
+  text-shadow: 0 0 30px rgba(31,107,255,0.4);
+  margin-bottom: 15px;
+}
+
+.servizi-text {
+  max-width: 500px;
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.servizi-text strong { color: white; }
+
+/* BOTTONI GENERICI */
+.btn {
+  display: inline-block;
+  padding: 14px 34px; 
+  border-radius: 50px; 
+  background: linear-gradient(135deg, var(--blue), var(--purple)); 
+  color: white; 
+  text-decoration: none; 
+  font-weight: 600; 
+  box-shadow: 0 4px 15px rgba(127,44,255,.3); 
+  transition: transform .2s, box-shadow .2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(127,44,255,.5);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--purple);
+  box-shadow: none;
+}
+
+/* SEZIONI GENERALI */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-family: 'Bebas Neue'; 
+  font-size: 3rem; 
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--text);
+}
+
+/* INSTAGRAM GRID */
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.insta-card {
+  position: relative;
+  display: block;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 300px; /* Altezza fissa per uniformità */
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.insta-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.insta-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.3s;
+  gap: 10px;
+}
+
+.insta-card:hover img { transform: scale(1.1); }
+.insta-card:hover .insta-overlay { opacity: 1; }
+
+/* MAPPA */
+.map-container {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(31,107,255,.15);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* CONTATTI */
+.contatti-wrapper {
+  display: flex;
+  flex-direction: column; /* Impila verticalmente */
+  align-items: center; /* Centra orizzontalmente */
+  gap: 25px; /* Spazio tra gli elementi */
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.contatto-item {
+  font-size: 1.2rem;
+}
+
+.contatto-item a { color: white; text-decoration: none; }
+.icon-gradient {
+  background: linear-gradient(to bottom, var(--blue), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Tasto WhatsApp Specifico */
+.whatsapp-btn {
+  background: var(--green); /* Verde solido */
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+.whatsapp-btn:hover {
+  background: #1ebc57;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+.whatsapp-btn i { font-size: 1.3rem; }
+
+/* FORM (Utilizzato in prenota.html) */
+form {
+  max-width: 450px; 
+  margin: auto; 
+  background: var(--card-bg); 
+  padding: 30px; 
+  border-radius: 20px; 
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+form input, form select {
+  width: 100%; 
+  padding: 15px; 
+  margin-bottom: 15px; 
+  border-radius: 10px; 
+  border: 1px solid #333; 
+  background: #0a0a0f; 
+  color: white; 
+  font-size: 1rem;
+}
+form input:focus, form select:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+/* FOOTER */
+footer {
+  background: black; 
+  text-align: center; 
+  padding: 30px 20px; 
+  font-size: 0.9rem; 
+  color: #777;
+  padding-bottom: 80px; /* Spazio per la CTA mobile */
+}
+footer a { color: #999; text-decoration: none; margin-left: 10px; }
+
+/* COOKIE BANNER */
+#cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #111;
+  border-top: 1px solid #333;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.9rem;
+  z-index: 2000;
+  display: none; /* Gestito da JS */
+}
+#cookie-banner button {
+  background: var(--text);
+  color: black;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MOBILE CTA BAR */
+.mobile-cta {
+  position: fixed; 
+  bottom: 0; left: 0; right: 0; 
+  display: none; 
+  background: rgba(10,10,15,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1500;
+  border-top: 1px solid #333;
+}
+.mobile-cta a {
+  flex: 1; 
+  padding: 15px; 
+  text-align: center; 
+  color: white; 
+  font-weight: 600; 
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.mobile-cta a:first-child { border-right: 1px solid #333; }
+.mobile-cta a:last-child { color: var(--green); }
+
+/* MEDIA QUERIES (Mobile responsiveness) */
+@media(max-width: 768px) {
+  header { padding: 15px 20px; }
+  header h1 { font-size: 1.5rem; }
+  nav { display: none; /* Nascondi menu desktop su mobile */ }
+  
+  .mobile-cta { display: flex; }
+  
+  .hero h2 { font-size: 3rem; }
+  .servizi-text { font-size: 1rem; padding: 0 10px; }
+  
+  section { padding: 50px 20px; }
+  section h2 { font-size: 2.2rem; }
+}
